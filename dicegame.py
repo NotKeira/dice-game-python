@@ -63,9 +63,9 @@ if password11 or password111 == userOnePassword and user11 or user111 == userOne
     user1ID = random.sample(ranger, 1)
     data = "\n\nPlayer Data: \n{0}\n{1}\n{2}"
     print(data.format(userOneName, userOnePassword, user1ID))
-    #storage.write(data.format(userOneName, userOnePassword, user1ID))
+    # storage.write(data.format(userOneName, userOnePassword, user1ID))
     # storage.close()
-    #reader = open("PlayerData.txt", "r")
+    # reader = open("PlayerData.txt", "r")
     # print(reader.read())
     print(
         "\n",
@@ -175,6 +175,30 @@ if password22 or password222 == userTwoPassword and user22 or user222 == userTwo
             print("it f*cked up")
             pass
 
+if score1 == score2:
+    num = num+1
+    score = open("score.txt", "a")
+    dice1 = random.randint(1, 6)
+    dice2 = random.randint(1, 6)
+    dice3 = random.randint(1, 6)
+    dice4 = random.randint(1, 6)
+    if dice1 == dice2:
+        dice3 = random.randint(1, 6)
+        score2 = score2+dice1+dice2
+    if dice1+dice2 in even:
+        score1 = score1+10
+    else:
+        score1 = score1-5
+    if dice2+dice3 in even:
+        score2 = score2+10
+    else:
+        score2 = score2-5
+    
+    roundText2 = "\n TIE BREAKER ROUND SCORES...\N Scores\n{0} {1} AND {2} {3}\n"
+    text = roundText2.format(dice1, dice2, dice3, dice4)
+    print(text)
+    score1 = score1+dice1+dice2
+    score2 = score2+dice3+dice4
 
 # sql database
 conn = sqlite3.connect('scores.db')
