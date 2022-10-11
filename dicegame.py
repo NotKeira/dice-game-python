@@ -30,6 +30,7 @@ h = "6. Do not steal my code or I will hunt you down and murder you and your fam
 
 even = [2, 4, 6, 8, 10, 12]
 storageCreate = open("PlayerData.txt", "x")
+scoreCreate = open("score.txt", "x")
 storage = open("PlayerData.txt", "a")
 
 
@@ -44,7 +45,7 @@ for i in range(5):
 start = input("Are you ready to start?")
 
 userOneName = input("What is your username?")
-userOnePassword = "IsCool"
+userOnePassword = input("What is your password?")
 user11 = input("Please repeat your username for confirmation. ")
 password11 = input("Please repeat your password for confirmation. ")
 if password11 != userOnePassword:
@@ -83,8 +84,8 @@ if password11 or password111 == userOnePassword and user11 or user111 == userOne
         "\n\n",
     )
 
-userTwoName = "Dave"
-userTwoPassword = "Meh"
+userTwoName = input("What is your username?")
+userTwoPassword = input("What is your password?")
 user22 = input("Please repeat your username for confirmation. ")
 password22 = input("Please repeat your password for confirmation. ")
 if password22 != userTwoPassword:
