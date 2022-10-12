@@ -194,7 +194,7 @@ if score1 == score2:
     else:
         score2 = score2-5
     
-    roundText2 = "\n TIE BREAKER ROUND SCORES...\N Scores\n{0} {1} AND {2} {3}\n"
+    roundText2 = "\n TIE BREAKER ROUND SCORES...\n Scores\n{0} {1} AND {2} {3}\n"
     text = roundText2.format(dice1, dice2, dice3, dice4)
     print(text)
     score1 = score1+dice1+dice2
